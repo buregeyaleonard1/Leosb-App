@@ -1,36 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Leosb App – Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    .box {
-      padding: 30px;
-      border-radius: 10px;
-      background: #1e293b;
-    }
-    h1 {
-      color: #38bdf8;
-    }
-  </style>
-</head>
-<body>
-  <div class="box"> <button onclick="alertMessage()">Click Me</button>
-    <h1>🚀 Leosb App</h1>
-    <p>Coming Soon</p>
-    <p>App is under development.</p>
+<div class="app-container">
+  <h1>🚀 Leosb App</h1>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showHome()">Home</button>
+    <button onclick="showAbout()">About</button>
+    <button onclick="showContact()">Contact</button>
+  </nav>
+
+  <!-- Pages -->
+  <div id="home" class="page">
+    <p>Welcome to Leosb App!</p>
+    <button onclick="alert('Home button works!')">Test Home</button>
   </div>
-</body>
-</html>
+
+  <div id="about" class="page" style="display:none">
+    <p>This is the About page</p>
+  </div>
+
+  <div id="contact" class="page" style="display:none">
+    <form>
+      <input type="text" placeholder="Your name">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
