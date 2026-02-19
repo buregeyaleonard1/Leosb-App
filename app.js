@@ -1,3 +1,3 @@
-function testHome() {
-  alert("Home button works!");
+function startApp() {
+  alert("Welcome to Leosb App! 🚀");
 }
