@@ -10,22 +10,29 @@ body {
   text-align: center;
 }
 
-.container {
+.app-container {
   padding: 30px;
   border-radius: 12px;
   background: rgba(0,0,0,0.4);
 }
 
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
+nav button {
+  margin: 5px;
+  padding: 8px 16px;
   border-radius: 8px;
   border: none;
-  background-color: #22c55e;
-  font-size: 16px;
   cursor: pointer;
+  background-color: #22c55e;
+  color: white;
 }
 
 button:active {
   transform: scale(0.98);
+}
+
+.page {
+  padding: 20px;
+  margin-top: 20px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
 }
