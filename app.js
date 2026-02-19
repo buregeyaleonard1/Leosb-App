@@ -33,3 +33,9 @@ function changeLanguage(){
       headerSub.textContent = 'Welcome to Leosb App';
   }
 }
+function showSection(sectionId){
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.getElementById(sectionId).classList.add('active');
+}
+
+// Default: show Home / dashboard
