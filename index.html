@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Leosb App - Home</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Leosb App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <h2>Leosb App</h2>
-    <div class="nav-links">
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">🚀 Leosb App</h1>
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Welcome to Leosb App</h2>
+    <p>Your digital app, built step by step.</p>
+    <button onclick="startApp()">Get Started</button>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="card">
+      <h3>⚡ Fast</h3>
+      <p>Optimized for speed and performance.</p>
     </div>
-  </nav>
+    <div class="card">
+      <h3>🔐 Secure</h3>
+      <p>Your data is protected and safe.</p>
+    </div>
+    <div class="card">
+      <h3>👌 Easy</h3>
+      <p>Simple and user-friendly design.</p>
+    </div>
+  </section>
 
-  <main class="container">
-    <h1>Welcome to Leosb App</h1>
-    <p>This is the Home page. App iriko irakora neza 🎉</p>
-
-    <button onclick="testHome()">Test Home</button>
-  </main>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Leosb App. All rights reserved.</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
