@@ -1,8 +1,2 @@
-function showSection(sectionId) {
-  const sections = document.querySelectorAll('.section');
-  sections.forEach(section => {
-    section.classList.remove('active');
-  });
-
-  document.getElementById(sectionId).classList.add('active');
-}
+// None functions zose za menu zizokora hano
+// Ubu twakoresheje alert gusa kugirango turebe ico click ikora
