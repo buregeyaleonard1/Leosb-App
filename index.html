@@ -2,54 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Leosb App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leosb App Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="navbar">
-  <h1 class="logo">🚀 Leosb App</h1>
-  <nav>
-    <a href="#" onclick="showSection('home')">Home</a>
-    <a href="#" onclick="showSection('about')">About</a>
-    <a href="#" onclick="showSection('contact')">Contact</a>
-  </nav>
+<header class="header">
+  <h1>🚀 Leosb App</h1>
+  <p>Welcome to Leosb App</p>
 </header>
 
-<!-- HOME -->
-<section id="home" class="section active">
-  <h2>Welcome to Leosb App</h2>
-  <p>Your digital app, built step by step.</p>
-  <button onclick="alert('Get Started clicked!')">Get Started</button>
-
-  <ul>
-    <li>⚡ Fast – Optimized for speed</li>
-    <li>🔒 Secure – Your data is safe</li>
-    <li>👌 Easy – Simple to use</li>
-  </ul>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>About Leosb App</h2>
-  <p>
-    Leosb App is a web application created step by step
-    using HTML, CSS, and JavaScript.
-    It is designed to grow into a full digital platform.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>Email: support@leosb.app</p>
-  <p>GitHub: buregeyaleonard1</p>
-</section>
-
-<footer>
-  <p>© 2026 Leosb App. All rights reserved.</p>
-</footer>
+<main class="dashboard">
+  <div class="menu-item" onclick="alert('Home clicked!')">Home</div>
+  <div class="menu-item" onclick="alert('Language clicked!')">Language</div>
+  <div class="menu-item" onclick="alert('About clicked!')">About</div>
+  <div class="menu-item" onclick="alert('Secure clicked!')">Secure</div>
+  <div class="menu-item" onclick="alert('Contact clicked!')">Contact</div>
+  <div class="menu-item" onclick="alert('Core Team clicked!')">Core Team</div>
+  <div class="menu-item" onclick="alert('Support clicked!')">Support</div>
+  <!-- Hano ushobora kongeramwo ibindi -->
+</main>
 
 <script src="app.js"></script>
 </body>
