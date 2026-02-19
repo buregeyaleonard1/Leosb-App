@@ -25,7 +25,16 @@
 
 <main id="content">
   <div id="home" class="section">Welcome to Leosb App! This is Home.</div>
-  <div id="language" class="section">Language selection coming soon.</div>
+  <div id="language" class="section">
+  <h2>Language Selection</h2>
+  <p>Select your preferred language:</p>
+  <select id="languageSelect" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="rn">Kirundi</option>
+    <option value="sw">Swahili</option>
+  </select>
+</div>
   <div id="about" class="section">This is the About page.</div>
   <div id="secure" class="section">Security info will be here.</div>
   <div id="contact" class="section">Contact us at support@leosb.app</div>
