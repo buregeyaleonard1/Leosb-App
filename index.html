@@ -2,72 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Leosb App</title>
-  <style>
-    body {
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#0f2027;
-      color:white;
-      text-align:center;
-    }
-    header {
-      background:#000;
-      padding:15px;
-    }
-    button {
-      margin:10px;
-      padding:10px 20px;
-      border:none;
-      border-radius:5px;
-      background:#00ff99;
-      font-size:16px;
-      cursor:pointer;
-    }
-    section {
-      display:none;
-      padding:30px;
-    }
-    section.active {
-      display:block;
-    }
-  </style>
+  <title>Leosb App - Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <button onclick="showSection('home')">Home</button>
-  <button onclick="showSection('about')">About</button>
-  <button onclick="showSection('contact')">Contact</button>
-</header>
+  <nav class="navbar">
+    <h2>Leosb App</h2>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-<section id="home" class="active">
-  <h1>Leosb App</h1>
-  <p>Coming Soon 🚀</p>
-  <p>App is under development.</p>
-</section>
+  <main class="container">
+    <h1>Welcome to Leosb App</h1>
+    <p>This is the Home page. App iriko irakora neza 🎉</p>
 
-<section id="about">
-  <h1>About Leosb App</h1>
-  <p>
-    Leosb App is a web application currently under development.
-    It is built step by step and will later support advanced features.
-  </p>
-</section>
+    <button onclick="testHome()">Test Home</button>
+  </main>
 
-<section id="contact">
-  <h1>Contact</h1>
-  <p>Email: contact@leosb.app</p>
-</section>
-
-<script>
-  function showSection(id) {
-    document.querySelectorAll('section').forEach(sec => {
-      sec.classList.remove('active');
-    });
-    document.getElementById(id).classList.add('active');
-  }
-</script>
-
+  <script src="app.js"></script>
 </body>
 </html>
