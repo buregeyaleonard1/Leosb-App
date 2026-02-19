@@ -1,29 +1,42 @@
-<div class="app-container">
-  <h1>🚀 Leosb App</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leosb App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>🚀 Leosb App</h1>
 
-  <!-- Navigation -->
-  <nav>
-    <button onclick="showHome()">Home</button>
-    <button onclick="showAbout()">About</button>
-    <button onclick="showContact()">Contact</button>
-  </nav>
+    <!-- Navigation -->
+    <nav>
+      <button onclick="showHome()">Home</button>
+      <button onclick="showAbout()">About</button>
+      <button onclick="showContact()">Contact</button>
+    </nav>
 
-  <!-- Pages -->
-  <div id="home" class="page">
-    <p>Welcome to Leosb App!</p>
-    <button onclick="alert('Home button works!')">Test Home</button>
+    <!-- Pages -->
+    <div id="home" class="page">
+      <p>Welcome to Leosb App!</p>
+      <button onclick="alert('Home button works!')">Test Home</button>
+    </div>
+
+    <div id="about" class="page" style="display:none">
+      <p>This is the About page</p>
+    </div>
+
+    <div id="contact" class="page" style="display:none">
+      <form>
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
   </div>
-
-  <div id="about" class="page" style="display:none">
-    <p>This is the About page</p>
-  </div>
-
-  <div id="contact" class="page" style="display:none">
-    <form>
-      <input type="text" placeholder="Your name">
-      <input type="email" placeholder="Email">
-      <textarea placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
