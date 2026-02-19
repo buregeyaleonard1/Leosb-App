@@ -7,3 +7,23 @@ body {margin:0; font-family:Arial, sans-serif; background:#0f172a; color:#fff; t
 .menu span:hover {background:#2563eb;}
 .section {display:none; padding:40px;}
 .section.active {display:block;}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 40px;
+}
+
+.menu-item {
+  padding: 20px;
+  border-radius: 12px;
+  background: #1e293b;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .3s;
+  text-align:center;
+}
+
+.menu-item:hover { background: #2563eb; transform: scale(1.05); }
+.section {display:none; padding:40px;}
+.section.active {display:block;}
