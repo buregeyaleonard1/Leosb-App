@@ -1,27 +1,18 @@
 function openPage(title) {
   const content = document.getElementById("content");
 
-  content.innerHTML = `
-    <div class="page">
-      <button onclick="goBack()" class="back-btn">⬅ Back</button>
-      <h2>${title}</h2>
-      <div id="pageContent"></div>
-    </div>
-  `;
+  let pageData = "";
 
-  const pageContent = document.getElementById("pageContent");
-
-  // Shiramwo ibintu vyihariye kuri buri category
-  if (title === "Imodoka") {
-    pageContent.innerHTML = `
+  if (title === "cars") {
+    pageData = `
       <p>🚗 Toyota - $5000</p>
       <p>🚙 BMW - $12000</p>
       <p>🚕 Honda - $7000</p>
     `;
   }
 
-  if (title === "Impuzu") {
-    pageContent.innerHTML = `
+  if (title === "clothes") {
+    pageData = `
       <p>👕 T-Shirt - $10</p>
       <p>👖 Jeans - $25</p>
       <p>👟 Shoes - $40</p>
@@ -29,7 +20,7 @@ function openPage(title) {
   }
 
   if (title === "Electronics") {
-    pageContent.innerHTML = `
+    pageData = `
       <p>📱 Phone - $300</p>
       <p>💻 Laptop - $800</p>
       <p>🎧 Headphones - $50</p>
@@ -37,21 +28,31 @@ function openPage(title) {
   }
 
   if (title === "Hotel") {
-    pageContent.innerHTML = `
+    pageData = `
       <p>🏨 VIP Room - $100/night</p>
       <p>🛏 Standard Room - $50/night</p>
     `;
   }
 
   if (title === "Restaurant VIP") {
-    pageContent.innerHTML = `
+    pageData = `
       <p>🍗 Chicken - $8</p>
       <p>🍕 Pizza - $12</p>
       <p>🥤 Juice - $3</p>
     `;
   }
+
+  content.innerHTML = `
+    <div class="page">
+      <button onclick="showDashboard()" class="back-btn">⬅ Back</button>
+      <h2>${title}</h2>
+      <div class="items">
+        ${pageData}
+      </div>
+    </div>
+  `;
 }
 
-function goBack() {
-  location.reload();
+function showDashboard() {
+  location.reload(); // ushobora kubikura mu nyuma
 }
