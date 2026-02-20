@@ -1,41 +1,44 @@
-function showSection(sectionId){
+<script>
+function openSection(id){
+  // Hisha sections zose
   const sections = document.querySelectorAll('.section');
-  sections.forEach(s => s.classList.remove('active'));
-  document.getElementById(sectionId).classList.add('active');
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+
+  // Erekana iyatoranyijwe
+  document.getElementById(id).style.display = "block";
+
+  logActivity("Opened: " + id);
 }
 
-// Default: show Home
-showSection('home');
-function changeLanguage(){
-  const lang = document.getElementById('languageSelect').value;
-  const headerTitle = document.querySelector('.header h1');
-  const headerSub = document.querySelector('.header p');
-  
-  switch(lang){
-    case 'en':
-      headerTitle.textContent = '🚀 Leosb App';
-      headerSub.textContent = 'Welcome to Leosb App';
-      break;
-    case 'fr':
-      headerTitle.textContent = '🚀 Application Leosb';
-      headerSub.textContent = 'Bienvenue sur l’application Leosb';
-      break;
-    case 'rn':
-      headerTitle.textContent = '🚀 Leosb App';
-      headerSub.textContent = 'Ikaze muri Leosb App';
-      break;
-    case 'sw':
-      headerTitle.textContent = '🚀 Programu ya Leosb';
-      headerSub.textContent = 'Karibu kwenye Leosb App';
-      break;
-    default:
-      headerTitle.textContent = '🚀 Leosb App';
-      headerSub.textContent = 'Welcome to Leosb App';
-  }
-}
-function showSection(sectionId){
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.getElementById(sectionId).classList.add('active');
+function goHome(){
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+
+  document.getElementById('home').style.display = "block";
+
+  logActivity("Returned Home");
 }
 
-// Default: show Home / dashboard
+function logActivity(message){
+  const time = new Date().toLocaleString();
+  const log = "["+time+"] "+message;
+
+  let logs = JSON.parse(localStorage.getItem("logs")) || [];
+  logs.push(log);
+  localStorage.setItem("logs", JSON.stringify(logs));
+}
+
+// Ibi bituma Home ari yo yonyine igaragara mu ntango
+window.onload = function(){
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    section.style.display = "none";
+  });
+
+  document.getElementById('home').style.display = "block";
+};
+</script>
